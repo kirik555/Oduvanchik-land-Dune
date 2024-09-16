@@ -1,0 +1,8 @@
+/*
+*/
+
+SELECT
+  COUNT(*) AS transactions_today
+FROM ethereum.transactions
+WHERE
+  DATE_TRUNC('day', block_time) = DATE_TRUNC('day', CURRENT_DATE)
